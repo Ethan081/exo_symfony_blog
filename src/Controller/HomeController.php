@@ -5,13 +5,12 @@ namespace App\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
 class HomeController extends AbstractController
 {
+    //je cree un attribut de class
     private $articles = [
     1 => [
     'title' => 'Article 1',
@@ -45,6 +44,7 @@ class HomeController extends AbstractController
     ],
 
     ];
+    //Route de ma page homePage
     /**
      * @Route("/homepage", name="home_page")
      */
@@ -54,11 +54,14 @@ class HomeController extends AbstractController
         //je recupere le contenue de la page  homePage pour retourner  la @Route /homePage.
         return $this->render("homePage.html.twig",
             [
+                //j'appel mon attribut de class
                 'articles'=>$this->articles
             ]
         );
     }
-    //Route de ma page Articles
+
+
+    //Route de ma page lesArticles
     /**
      * @Route("/lesarticles", name="les_article_page")
      */
@@ -66,12 +69,15 @@ class HomeController extends AbstractController
     {
         return $this->render("lesArticles.html.twig",
             [
+                //j'appel mon attribut de class
                 'articles'=>$this->articles
             ]
         );
 
     }
-    //Route de mon Article
+
+
+    //Route de mon Article simple.
     /**
      * @Route("/article", name="l_article_page")
      */
@@ -79,12 +85,11 @@ class HomeController extends AbstractController
     {
         return $this->render("article.html.twig",
             [
+                //j'appel mon attribut de class
                 'articles'=>$this->articles
             ]
         );
 
     }
-
-
 
 }
