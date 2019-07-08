@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+{% block title %}L'Article{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="container">
+            {#  je declare une boucle for . qui itere sur articles a l'aide de 'element '       #}
+            <div class="article">
+                {% for element in articles|slice(0,1) %}
+                        <div class="titre">
+                            {#je viens chercher la kley de mon tableau starDisco avec element.nom pour aficher sa valeur , le nom de la personne#}
+                            <h1>{{ element.title }}</h1>
+                        </div>
+                        <div class="imgarticle">
+                            <img src="{{ element.image }}" alt="" class="resp">
+                        </div>
+                        <div class="content">
+                            <span class="textArticle">{{ element.content }}</span>
+                        </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}

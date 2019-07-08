@@ -1,0 +1,145 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+a{
+    text-decoration: none;
+    color:#AA3333;
+}
+a:hover{
+    color: #dc3545;
+}
+.textArticle{
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    font-weight: 400;
+}
+.header{
+    background :#EF8275;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.lesArticles{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+
+}
+.container{
+    width: 90%;
+    background :#EF8275;
+    /*background-color: #f1f1f1;*/
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    margin: 0 auto;
+}
+.content{
+    color: black;
+    width: 50%;
+    margin-top: 60px;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.imgarticle{
+    width: 60%;
+
+}
+.img{
+    width: 200px;
+    height: 100px;
+}
+.homepicture{
+    width: 70%;
+    width: 50%;
+    margin: 0 auto;
+
+}
+.titrehome{
+   text-align: center;
+}
+.resp{
+    width:100%;
+    height: auto;
+
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin-top: 5px;
+
+}
+.footer{
+    background-color: #aacd4e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+
+}
+/*-------------------------------------------------------------*/
+/*test*/
+
+
+.card-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+.card:hover{
+    background-color: #aacd4e;;
+
+}
+.card {
+    background: #fff;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
+    position: relative;
+    cursor: pointer;
+    background :#EF8275;
+    border-radius: 0px 0px 30% 0;
+}
+
+
+
+
+div{
+    transition:transform .35s ease-in-out;
+}
+
+.card-image{
+    background-size : cover;
+    height : 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow : hidden;
+}
+.card-desc {
+    height: 42%;
+    margin: .5em;
+}
+h1{
+    padding : 0 1em;
+    font-size : 1.7rem;
+    z-index : 2;
+}
+p{
+    font-weight : 100;
+    font-size : 0.85rem;
+}
+

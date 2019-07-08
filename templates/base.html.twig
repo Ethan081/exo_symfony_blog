@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr_FR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo"><img src="{{ asset('assets/img/Gulf_logo.png') }}" alt="" class="resp"></div>
+            <div><a href="{{ path("home_page")}}" class="button">Home</a></div>
+            <div><a href="{{ path("les_article_page")}}" class="button">Les Articles</a></div>
+            <div><a target="_blank" href="{{ path("l_article_page")}}" class="button">L'Article</a></div>
+        </header>
+
+        {% block main%}{% endblock %}
+
+        <footer class="footer">
+            <div class="logo"><img src="{{ asset('assets/img/Gulf_logo.png') }}" alt="" class="resp"></div>
+
+        </footer>
+    </body>
+</html>

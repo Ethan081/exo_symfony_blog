@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+{% block title %}HomePageArticles{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="homepicture">
+            <img src="{{ asset('assets/img/chateau_Neuschwanstein.jpg') }}" alt="" class="resp">
+        </div>
+        <div class="titrehome">
+            <h1>Les Articles</h1>
+        </div>
+        <div class="lesArticles">
+            {% for element in articles|slice(-3) %}
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ element.image }}" alt="" class="resp">
+                    </div>
+                    <div class="card-desc">
+                        <h1>{{ element.title }}<h1>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

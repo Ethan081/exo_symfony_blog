@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block title %}LesArticles{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="lesArticles">
+            {% for element in articles %}
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ element.image }}" alt="" class="resp">
+                        </div>
+                        <div class="card-desc">
+                            <h1>{{ element.title }}<h1>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock%}
