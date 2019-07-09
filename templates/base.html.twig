@@ -7,7 +7,7 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% block titlePage %}{% endblock %}</title>
         <script src="https://kit.fontawesome.com/70ece4c924.js"></script>
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     </head>
@@ -16,7 +16,8 @@
             <div class="logo"><img src="{{ asset('assets/img/Gulf_logo.png') }}" alt="" class="resp"></div>
             <div><a href="{{ path("home_page")}}" class="button">Home</a></div>
             <div><a href="{{ path("les_article_page")}}" class="button">Les Articles</a></div>
-            <div><a target="_blank" href="{{ path("l_article_page")}}" class="button">L'Article</a></div>
+            <div><a href="{{ path("produits")}}" class="button">Les Produits</a></div>
+
         </header>
 
         {% block main%}{% endblock %}

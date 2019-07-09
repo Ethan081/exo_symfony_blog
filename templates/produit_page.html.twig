@@ -1,23 +1,20 @@
 {#La balise extends me permet d'étendre un modèle à partir d'un autre.#}
 {% extends "base.html.twig" %}
 {#j indique le titre qui va etre placer dans la balise title#}
-{% block titlePage %}L'Article{% endblock %}
+{% block titlePage %}Produit{{ produit.title  }}{% endblock %}
 {#j'indique le contenue qui va etre placer dans le block main#}
 {% block main %}
     <main>
         <div class="container">
-
             <div class="article">
                 <div class="titre">
-                    {#Pour afficher les infos de mon article. J'utilise ma variable twig article
-                    et je lui ajoute la key de la valeur que je veux afficher. ex :  article.title #}
-                    <h1>{{ article.title }}</h1>
+                    <h1>{{ produit.title }}</h1>
                 </div>
                 <div class="imgarticle">
-                    <img src="{{ article.image }}" alt="" class="resp">
+                    <img src="{{ produit.image }}" alt="" class="resp">
                 </div>
                 <div class="content">
-                    <span class="textArticle">{{ article.content }}</span>
+                    <span class="textArticle">{{ produit.content }}</span>
                 </div>
             </div>
 

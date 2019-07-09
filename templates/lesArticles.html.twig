@@ -1,22 +1,23 @@
 {#La balise extends me permet d'étendre un modèle à partir d'un autre.#}
 {% extends "base.html.twig" %}
 {#j indique le titre qui va etre placer dans la balise title#}
-{% block title %}LesArticles{% endblock %}
+{% block titlePage %}LesArticles{% endblock %}
 {#j'indique le contenue qui va etre placer dans le block main#}
 {% block main %}
     <main>
         <div class="lesArticles">
-            {% for element in articles %}
-                <div class="card-group">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="{{ element.image }}" alt="" class="resp">
+            {# je rajoute a ma boucle for une valeur a key -> id #}
+            {% for id, element in articles %}
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="{{ element.image }}" alt="" class="resp">
+                            </div>
+                            <div class="card-desc">
+                                <h1>{{ element.title }}<h1>
+                            </div>
+                            {#  j'ajoute comme second paramettre de ma methode path id. et lui envoie la key->id a mon url  'id'->wildcard  #}
+                            <a target="_blank" href="{{ path('article_page', {'id': id }) }}">Voir</a>
                         </div>
-                        <div class="card-desc">
-                            <h1>{{ element.title }}<h1>
-                        </div>
-                    </div>
-                </div>
             {% endfor %}
         </div>
     </main>

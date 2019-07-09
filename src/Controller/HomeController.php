@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-    //je cree un attribut de class
+    //je cree une propriete de class article
     private $articles = [
     1 => [
     'title' => 'Article 1',
@@ -50,12 +50,14 @@ class HomeController extends AbstractController
      */
     public function homePage()
     {
-//
+        //je cree une variable a qui j assigne
+        $listArticles = array_slice($this->articles, -3);
         //je recupere le contenue de la page  homePage pour retourner  la @Route /homePage.
         return $this->render("homePage.html.twig",
             [
+
                 //j'appel mon attribut de class
-                'articles'=>$this->articles
+                'articles'=>$listArticles
             ]
         );
     }
@@ -78,18 +80,25 @@ class HomeController extends AbstractController
 
 
     //Route de mon Article simple.
+    //je cree une wildcard {id}, je qui me permet a afficher dans l url l index de mon article dans le tableau articles.
     /**
-     * @Route("/article", name="l_article_page")
+     * @Route("/article/{id}", name="article_page")
      */
-    public function article()
+    //je met en paramettre ma variable $id.
+    public function article($id)
     {
         return $this->render("article.html.twig",
             [
-                //j'appel mon attribut de class
-                'articles'=>$this->articles
+                //j'appel mon propriete de class
+                //j ajoute [$id] a mon atribue $this->articles[$id].
+                'article'=>$this->articles[$id]
             ]
         );
 
     }
+//    -----------------------------------------------------------------------------------------------------------
+
+
+
 
 }
