@@ -16,7 +16,7 @@ class MapController extends AbstractController
     {
         //je recupere la valeur de ma  query 'lang' et l assigne a ma variable $lang.
         $lang = $request->query->get('lang');
-
+        //je recupere le contenue de la page  map pour retourner  la @Route /map.
         //je recupere mon fichier twig de mon templete et le compile en lui injectant les infos de ma variable lang.
         return $this->render("map.html.twig",
             [

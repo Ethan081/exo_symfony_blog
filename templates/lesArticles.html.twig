@@ -1,9 +1,5 @@
-{#La balise extends me permet d'étendre un modèle à partir d'un autre.#}
-{% extends "base.html.twig" %}
-{#j indique le titre qui va etre placer dans la balise title#}
-{% block titlePage %}LesArticles{% endblock %}
-{#j'indique le contenue qui va etre placer dans le block main#}
-{% block main %}
+//je viens charcher le header qui se trouve dans le dossier Base et l inject en haut a l aide de \{% \include \'nomdufichier\' \%}
+{% include 'Base/_header.html.twig' %}
     <main>
         <div class="lesArticles">
             {# je rajoute a ma boucle for une valeur a key -> id #}
@@ -15,10 +11,10 @@
                             <div class="card-desc">
                                 <h1>{{ element.title }}<h1>
                             </div>
-                            {#  j'ajoute comme second paramettre de ma methode path id. et lui envoie la key->id a mon url  'id'->wildcard  #}
+                            {#  j'ajoute comme second paramettre de ma methode path . et lui renseigne la key->id a mon url  'id'->wildcard  #}
                             <a target="_blank" href="{{ path('article_page', {'id': id }) }}">Voir</a>
                         </div>
             {% endfor %}
         </div>
     </main>
-{% endblock%}
+{% include 'Base/_footer.html.twig' %}
