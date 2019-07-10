@@ -1,0 +1,66 @@
+{#La balise extends me permet d'étendre un modèle à partir d'un autre.#}
+{% extends "base.html.twig" %}
+{#j indique le titre qui va etre placer dans la balise title#}
+{% block title %}CGV{% endblock %}
+{#j'indique le contenue qui va etre placer dans le block main#}
+{% block main %}
+    <main>
+        <section>
+            <article class="article">
+                {% if lang == 'fr' %}
+                    <div class="titre">
+                        <h1>PROPRIETÉ INTELLECTUELLE</h1>
+                    </div>
+                    <div class="content">
+                        <p><span>La Société Editrice du Monde est le propriétaire exclusif de tous les droits de propriété intellectuelle portant tant sur la structure que sur le contenu du Site www.lemonde.fr.</span><br>
+                            <span>Les contenus du site www.lemonde.fr sont destinés à usage strictement personnel, privé et non collectif, librement pour le contenu gratuit, en contrepartie d’un abonnement pour le contenu payant. Il en est de même pour les fils RSS et les newsletters.</span><br>
+                            <span>Toute utilisation dans un cadre professionnel ou commercial ou toute commercialisation de ce contenu auprès de tiers est interdite, sauf accord exprès de la Société Editrice du Monde à demander à l’adresse suivante : droitsdauteur@lemonde.fr.</span>
+                        </p>
+                    </div>
+                {% elseif lang == 'en' %}
+                    <div class="titre">
+                        <h1>INTELLECTUAL PROPERTY</h1>
+                    </div>
+                    <div class="content">
+                        <p>
+                            <span>The Société Editrice du Monde is the exclusive owner of all intellectual property rights relating to both the structure and content of the www.lemonde.fr Site.</span><br>
+                            <span>The contents of the www.lemonde.fr site are intended for strictly personal, private and non-collective use, freely for free content, in return for a subscription for paid content. The same applies to RSS feeds and newsletters.</span><br>
+                            <span>Any use in a professional or commercial context or any marketing of this content to third parties is prohibited, unless expressly agreed by the Société Editrice du Monde at the following address: droitsdauteur@lemonde.fr</span>
+                        </p>
+                    </div>
+                {% elseif lang == 'es' %}
+                    <div class="titre">
+                        <h1>PROPIEDAD INTELECTUAL</h1>
+                    </div>
+                    <div class="content">
+                        <p>
+                            <span>La Société Editrice du Monde es la propietaria exclusiva de todos los derechos de propiedad intelectual relativos tanto a la estructura como al contenido del sitio www.lemonde.fr Site.</span><br>
+                            <span>Contenidos del sitio www.lemonde.fr están destinados a un uso estrictamente personal, privado y no colectivo, de forma gratuita y a cambio de una suscripción a contenidos de pago. Lo mismo se aplica a las fuentes RSS y a los boletines de noticias.</span><br>
+                            <span>Uso en un contexto profesional o comercial o cualquier comercialización de este contenido a terceros está prohibido, salvo acuerdo expreso de la Société Editrice du Monde en la siguiente dirección: droitsdauteur@lemonde.fr</span>.
+                        </p>
+                    </div>
+                {% elseif lang == 'de' %}
+                    <div class="titre">
+                        <h1>GEISTIGES EIGENTUM</h1>
+                    </div>
+                    <div class="content">
+                        <p>
+                            <span>The Société Editrice du Monde ist der alleinige Eigentümer aller geistigen Eigentumsrechte, die sich sowohl auf die Struktur als auch auf den Inhalt der Website www.lemonde.fr beziehen.</span><br>
+                            <span>Die Inhalte der Website www.lemonde.fr sind für den rein persönlichen, privaten und nicht-kollektiven Gebrauch bestimmt, frei für kostenlose Inhalte und gegen ein Abonnement für kostenpflichtige Inhalte. Gleiches gilt für RSS-Feeds und Newsletter.</span><br>
+                            <span>Jede Nutzung im beruflichen oder kommerziellen Rahmen oder jede Vermarktung dieser Inhalte an Dritte ist untersagt, es sei denn, die Société Editrice du Monde hat dies ausdrücklich unter folgender Adresse genehmigt: droitsdauteur@lemonde.fr</span>
+                        </p>
+                    </div>
+                {% else %}
+                    <div class="titre">
+                        <div><a href="{{ path("home_page")}}" class="button">Home</a></div>
+                    </div>
+
+                {% endif %}
+                    <div class="carte">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11316.78290447752!2d-0.5820722985961906!3d44.83794723814058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527c5d83ab46f%3A0x6d35932779e19514!2zTXVzw6llIGTCtEFxdWl0YWluZQ!5e0!3m2!1sfr!2sfr!4v1562749655004!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);" allowfullscreen></iframe>
+                    </div>
+
+            </article>
+        </section>
+    </main>
+{% endblock %}
