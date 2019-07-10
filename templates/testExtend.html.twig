@@ -1,0 +1,23 @@
+{% extends  "Base/baseTest.html.twig" %}
+{% block content%}
+    <div class="container">
+        <div class="article">
+            <div class="titre">
+                {#Pour afficher les infos de mon article. J'utilise ma variable twig article
+                et je lui ajoute la key de la valeur que je veux afficher. ex :  article.title #}
+                <h1>Bonjour</h1>
+            </div>
+            <div class="imgarticle">
+                <img src="https://i.ebayimg.com/images/g/k5cAAOSwNSxVeEJv/s-l500.jpg" alt="image" class="resp">
+            </div>
+            <div class="content">
+                <span class="textArticle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Delectus deleniti, dicta dolor dolorum harum ipsum laborum magnam quae quia rem,
+                    repellendus sed voluptatem. Aperiam corporis,
+                    fugiat illo obcaecati officia repellendus?
+                </span>
+            </div>
+        </div>
+    </div>
+{% endblock %}

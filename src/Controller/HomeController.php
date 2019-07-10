@@ -97,8 +97,33 @@ class HomeController extends AbstractController
 
     }
 //    -----------------------------------------------------------------------------------------------------------
+    //exo extend
+    /**
+ * @Route("/testExtend", name="testExtend_page")
+ */
+    //je met en paramettre ma variable $id.
+    public function test()
+    {
+        return $this->render("testExtend.html.twig",
+            [
 
+            ]
+        );
 
+    }
+    /**
+     * @Route("/testExtend02", name="testExtend02_page")
+     */
+    //je met en paramettre ma variable $id.
+    public function test02()
+    {
+        return $this->render("testExtend02.html.twig",
+            [
+
+            ]
+        );
+
+    }
 
 
 }

@@ -1,0 +1,63 @@
+{#Je cree une base pour pouvoir l utiliser dans toutes mes pages
+{% block ??? %}{% endblock %} peuvent etre comble #}
+<!doctype html>
+<html lang="fr_FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello</title>
+    <script src="https://kit.fontawesome.com/70ece4c924.js"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
+<body>
+<header class="header">
+    <div class="logo"><img src="{{ asset('assets/img/Gulf_logo.png') }}" alt="" class="resp"></div>
+    <div><a href="{{ path("home_page")}}" class="button">Home</a></div>
+    <div><a href="{{ path("les_article_page")}}" class="button">Les Articles</a></div>
+    <div><a href="{{ path("produits")}}" class="button">Les Produits</a></div>
+    <div><a href="{{ path("map")}}" class="button">CGV</a></div>
+    <div><a href="{{ path("testExtend_page")}}" class="button">Test01</a></div>
+    <div><a href="{{ path("testExtend02_page")}}" class="button">Test02</a></div>
+
+
+</header>
+<main>
+    <div class="block">
+        <div class="gPart">
+            {% block content%}{% endblock %}
+        </div>
+        <div class="dPart">
+            <div class="article">
+                <div class="titre">
+                    <h1>Side Bar</h1>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><a href="{{ path("home_page")}}" class="button">Home</a></li>
+                        <li><a href="{{ path("les_article_page")}}" class="button">Les Articles</a></li>
+                        <li><a href="{{ path("produits")}}" class="button">Les Produits</a></li>
+                        <li><a href="{{ path("map")}}" class="button">CGV</a></li>
+                        <li><a href="{{ path("testExtend_page")}}" class="button">Test01</a></li>
+                        <li><a href="{{ path("testExtend02_page")}}" class="button">Test02</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="vide">
+
+    </div>
+    <div class="logo"><img src="{{ asset('assets/img/Gulf_logo.png') }}" alt="" class="resp"></div>
+    <div class="socialNetwork">
+        <span class="icon" style="font-size: 2em; color: #3b5998;"><i class="fab fa-facebook-square"></i></span>
+        <span class="icon" style="font-size: 2em; color: #00acee;"><i class="fab fa-twitter"></i></span>
+        <span class="icon" style="font-size: 2em; color: #C13584;"><i class="fab fa-instagram"></i></span>
+    </div>
+
+</footer>
+</body>
+</html>

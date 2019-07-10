@@ -7,9 +7,17 @@ body{
 a{
     text-decoration: none;
     color:#AA3333;
+
+}
+li{
+    list-style-type: none;
 }
 a:hover{
-    color: #dc3545;
+    color: greenyellow;
+}
+.link{
+    font-size : 2rem;
+    color : #0f82ff;
 }
 .textArticle{
     font-family: "Helvetica Neue";
@@ -153,8 +161,24 @@ p{
     font-size : 0.85rem;
 }
 /*-------------------------------------------------------------*/
-/*map*/
+/*extend*/
+.block{
+    width: 100%;
+    display: flex;
 
+}
+.gPart{
+    width: 80%;
+}
+.dPart{
+    width: 20%;
+    background :#EF8275;
+    box-shadow: -5px 5px 10px 0 rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    margin: 0 auto;
+
+
+}
 
 
 
